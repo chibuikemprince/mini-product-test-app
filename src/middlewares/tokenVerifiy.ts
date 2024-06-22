@@ -20,7 +20,6 @@ export function authenticateHttpRequest(
 
     req.userId = userId;
     next();
-    res.sendStatus(200);
   } else {
     res.status(401).json({ error: "Invalid token" });
   }
